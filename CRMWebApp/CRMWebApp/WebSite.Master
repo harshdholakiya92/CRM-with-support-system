@@ -1,0 +1,86 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebSite.master.cs" Inherits="CRMWebApp.WebSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <meta name="viewport" content="width=device-width; initial-scale=1.12; "  />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="fontawesome-free/css/all.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 150px;
+          position: fixed;
+          z-index: 1;
+          top: 6%;
+          left: 0;
+          background-color: #212529;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        .sidenav a {
+          padding: 6px 6px 6px 32px;
+          text-decoration: none;
+          font-size: 15px;
+          color: #818181;
+          display: block;
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+
+        .main {
+          margin-left: 200px;
+          margin-top:70px;/* Same as the width of the sidenav */
+        }
+
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <nav class="navbar-dark  bg-dark fixed-top">
+          <a class="navbar-brand mr-1 " href="DashBoard.aspx">CRM</a>      
+        </nav>
+    </div>
+    
+  
+    <div class="sidenav">
+      <a href="DashBoard.aspx">Dashboard</a>
+      <a href="Clients.aspx">Customers</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+    
+    <div class="main">
+      <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    </div>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
